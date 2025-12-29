@@ -1,0 +1,342 @@
+/* -----------------------------------
+   Farben & Variablen
+----------------------------------- */
+:root {
+  --green-dark: #0B3D2E;
+  --green-mid: #0F5C43;
+  --green-light: #1A7A57;
+
+  --bg: #ffffff;
+  --bg-soft: #f5f5f7;
+
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* -----------------------------------
+   Global
+----------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Anke Devanagari", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -----------------------------------
+   Header
+----------------------------------- */
+header {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e5e5e7;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  position: relative;
+}
+
+.nav-domain {
+  font-size: 1.6rem;
+  letter-spacing: -0.8px;
+  color: var(--green-dark);
+}
+
+.nav-domain .thin {
+  font-weight: 100;
+}
+
+.nav-domain .semi {
+  font-weight: 600;
+}
+
+/* Button */
+.btn-primary {
+  padding: 10px 22px;
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--green-mid);
+}
+
+/* -----------------------------------
+   Hero (zentriert)
+----------------------------------- */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 100;
+  letter-spacing: -1.2px;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: #e8e8e8;
+  margin-bottom: 12px;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: #f2f2f2;
+  margin-bottom: 24px;
+}
+
+/* -----------------------------------
+   Sections
+----------------------------------- */
+.section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--green-dark);
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 1.05rem;
+}
+
+/* -----------------------------------
+   Icon + Title
+----------------------------------- */
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--green-dark);
+}
+
+.icon-title svg {
+  stroke: var(--green-dark);
+}
+
+/* -----------------------------------
+   Cards
+----------------------------------- */
+.cards {
+  display: grid;
+  gap: 28px;
+}
+
+
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards-2 {
+  display: grid;
+  gap: 28px;
+}
+
+@media (min-width: 900px) {
+  .cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 26px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #dfe4e2;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 52px rgba(0,0,0,0.10);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* Karten mit dunkelgrünem Hintergrund: Icons & Text weiß */
+.card.card-dark {
+  background: var(--green-dark);
+  color: white;
+}
+
+.card.card-dark .icon-title svg {
+  stroke: white;
+}
+
+.card.card-dark .icon-title span,
+.card.card-dark .card-text {
+  color: white;
+}
+
+/* -----------------------------------
+   Preise
+----------------------------------- */
+.price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.price small {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.price-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.highlight {
+  border-color: var(--green-dark);
+  box-shadow: 0 26px 52px rgba(0,0,0,0.12);
+}
+
+/* -----------------------------------
+   Formular
+----------------------------------- */
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--green-dark);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d2d2d7;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.input:focus {
+  border-color: var(--green-dark);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(11,61,46,0.18);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+footer {
+  background: var(--bg-soft);
+  border-top: 1px solid #e5e5e7;
+  padding: 40px 0;
+  margin-top: 80px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-grid {
+  display: grid;
+  gap: 28px;
+}
+
+@media (min-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 2fr 2fr 1.5fr;
+  }
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--green-dark);
+}
+
+.footer-link {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.footer-meta {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}

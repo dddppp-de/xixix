@@ -20,32 +20,672 @@
       <div class="nav-domain">
         <span class="thin">Akku</span><span class="semi">Abholung</span><span class="thin">.de</span>
       </div>
-      <a href="#registrieren" class="btn-primary">Vorab registrieren</a>
     </div>
   </header>
 
-  <main class="container">
+  <main class="xcontainer">
 
     <!-- HERO -->
-    <div data-include="hero.html"></div>
+    <section class="hero" style="
+  background: white;
+  color: var(--green-dark);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px 120px; /* deutlich weniger oben */
+">
+  <div style="max-width:700px;">
+
+    <!-- LOGO -->
+    <div style="
+      background:white;
+      padding:18px 22px;
+      border-radius:18px;
+      margin-bottom:28px;
+      display:flex;
+      justify-content:center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    ">
+      <img src="assets/Logo-Akkuabholung.jpeg"
+           alt="AkkuAbholung Logo"
+           style="max-width:220px; height:auto;" />
+    </div>
+
+    <!-- SUBLINE -->
+    <div class="hero-sub" style="
+      color: var(--muted);
+      margin-bottom:14px;
+      font-size:1.05rem;
+    ">
+      Akku-Abholung in Vorbereitung · Bedarfserfassung läuft
+    </div>
+
+    <!-- HEADLINE -->
+    <h1 class="hero-title" style="
+      color: var(--green-dark);
+      margin-top:0;
+      font-weight:600;
+    ">
+      Sichere Akku-Abholung & fachgerechte Entsorgung – deutschlandweit geplant
+    </h1>
+
+    <!-- TEXT -->
+    <p class="hero-text" style="
+      color: #444;
+      margin-top:18px;
+      font-size:1.1rem;
+      line-height:1.6;
+    ">
+      Wir entwickeln einen zuverlässigen Service zur Abholung und Entsorgung von Akkus aller Art – sicher, gesetzeskonform und deutschlandweit.
+      Um das Angebot optimal auszurichten, erfassen wir aktuell den konkreten Bedarf.
+      Melden Sie Ihre Akkus unverbindlich an und erhalten Sie eine Benachrichtigung, sobald unser Service in Ihrer Region startet.
+    </p>
+
+    <!-- CTA -->
+    <a href="#registrieren" class="btn-primary" style="margin-top:26px;">
+      Jetzt Bedarf anmelden
+    </a>
+
+  </div>
+</section>
+
+
+
+
 
     <!-- LEISTUNGEN -->
-    <div data-include="sections/leistungen.html"></div>
+   <section id="leistungen" style="
+  background: var(--green-dark);
+  color: white;
+  padding: 40px 40px;
+">
+  <h2 class="section-title" style="color:white;">Unsere geplanten Leistungen</h2>
+  <p class="section-sub" style="color:#e8e8e8;">
+    Der Service befindet sich im Aufbau. Folgende Kundengruppen möchten wir perspektivisch bedienen:
+  </p>
+
+  <div class="cards">
+
+    <!-- Privatpersonen -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="7" r="4"/>
+          <path d="M5.5 21c1.5-4 11.5-4 13 0"/>
+        </svg>
+        <span>Privatpersonen</span>
+      </div>
+      <p class="card-text">
+        Flexible Abholtermine ohne Mindestmenge – ideal für E‑Bike‑Akkus, Werkzeugakkus oder andere Haushaltsakkus.
+      </p>
+    </div>
+
+    <!-- Unternehmen -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="7" width="7" height="13"/>
+          <rect x="14" y="3" width="7" height="17"/>
+        </svg>
+        <span>Unternehmen</span>
+      </div>
+      <p class="card-text">
+        Regelmäßige Abholung größerer Mengen mit Rahmenverträgen, Dokumentation und planbaren Intervallen.
+      </p>
+    </div>
+
+    <!-- Behörden -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>
+        </svg>
+        <span>Behörden</span>
+      </div>
+      <p class="card-text">
+        Zuverlässiger Partner für Kommunen, Schulen und andere Einrichtungen mit hohen Sicherheitsanforderungen.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+ 
 
     <!-- AKKU-TYPEN -->
-    <div data-include="sections/akkus.html"></div>
+    <section id="akkutypen" style="
+  background:white;
+  color:var(--green-dark);
+  padding:80px 20px;
+">
+
+  <style>
+    /* Lokale Styles, damit nichts global überschrieben wird */
+    #akkutypen .card-dark {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    #akkutypen .card-dark .icon-title svg {
+      stroke: white !important;
+    }
+
+    #akkutypen .card-dark .icon-title span,
+    #akkutypen .card-dark .card-text {
+      color: white !important;
+    }
+
+    #akkutypen .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    #akkutypen .icon-title span {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+  </style>
+
+  <h2 class="section-title">Welche Akkutypen sollen abgeholt werden?</h2>
+  <p class="section-sub" style="color:#555;">
+    Geplant ist die Abholung aller gängigen Akkuarten – von unkritisch bis besonders sicherheitsrelevant.
+  </p>
+
+  <div class="cards">
+
+    <!-- Lithium-Ionen -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="18" height="10" rx="2"/>
+          <line x1="22" y1="11" x2="22" y2="13"/>
+        </svg>
+        <span>Lithium‑Ionen‑Akkus</span>
+      </div>
+      <p class="card-text">
+        Der am weitesten verbreitete Akkutyp – z. B. in E‑Bikes, Smartphones, Werkzeugen und Powerbanks.
+      </p>
+    </div>
+
+    <!-- Lithium-Polymer -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="6" width="14" height="12" rx="2"/>
+          <path d="M17 10h4v4h-4z"/>
+        </svg>
+        <span>Lithium‑Polymer‑Akkus</span>
+      </div>
+      <p class="card-text">
+        Flache, flexible Akkus – häufig in Drohnen, Tablets und modernen Elektronikgeräten.
+      </p>
+    </div>
+
+    <!-- Bleiakkus -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 7h18v10H3z"/>
+          <path d="M7 7V5h2v2"/>
+          <path d="M15 7V5h2v2"/>
+        </svg>
+        <span>Blei‑Akkus</span>
+      </div>
+      <p class="card-text">
+        Klassische Akkus aus Alarmanlagen, USVs, Rollstühlen oder Motorrädern.
+      </p>
+    </div>
+
+    <!-- NiMH -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="4" width="12" height="16" rx="2"/>
+          <line x1="10" y1="2" x2="14" y2="2"/>
+        </svg>
+        <span>NiMH‑Akkus</span>
+      </div>
+      <p class="card-text">
+        Wiederaufladbare Standard‑Akkus (AA/AAA) aus Haushaltsgeräten und Spielzeug.
+      </p>
+    </div>
+
+    <!-- Aufgeblähte / beschädigte Akkus -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="7" width="14" height="10" rx="2"/>
+          <path d="M5 5c2 0 3 2 3 3-2 0-3-2-3-3z"/>
+          <line x1="17" y1="11" x2="21" y2="11"/>
+        </svg>
+        <span>Aufgeblähte / beschädigte Akkus</span>
+      </div>
+      <p class="card-text">
+        Besonders sicherheitskritische Akkus, die spezielle Verpackung und Transport erfordern.
+      </p>
+    </div>
+
+    <!-- Sonstige Akkus -->
+    <div class="card card-dark">
+      <div class="icon-title">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 12h8"/>
+        </svg>
+        <span>Weitere Akkutypen</span>
+      </div>
+      <p class="card-text">
+        Auch Spezialakkus aus Werkzeugen, Gartengeräten, Medizingeräten oder Industrieanwendungen.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
     <!-- PREISE -->
-    <div data-include="sections/preise.html"></div>
+   <section id="preise" style="
+  background: var(--green-dark);
+  color: white;
+  padding: 80px 20px;
+">
+
+  <h2 class="section-title" style="color:white;">Orientierungswerte für die geplante Akku-Abholung</h2>
+  <p class="section-sub" style="color:#e8e8e8;">
+    Die folgenden Angaben dienen als unverbindliche Richtwerte. Die tatsächlichen Kosten hängen von Menge, Zustand, Verpackung und Entfernung ab.
+  </p>
+
+  <div class="cards">
+
+    <!-- E‑Bike Akku -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 17a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/>
+          <path d="M13 6h3l3 7h-4l-2-4h-3"/>
+          <circle cx="17" cy="17" r="3"/>
+        </svg>
+        <span>E‑Bike Akku</span>
+      </div>
+      <p class="card-text">
+        Typische Kapazität 300–700 Wh.  
+        <strong>Orientierungswert: ab 50 € pro Akku</strong>
+      </p>
+    </div>
+
+    <!-- Werkzeugakku -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="7" width="18" height="10" rx="2"/>
+          <line x1="7" y1="7" x2="7" y2="5"/>
+          <line x1="17" y1="7" x2="17" y2="5"/>
+        </svg>
+        <span>Werkzeugakku</span>
+      </div>
+      <p class="card-text">
+        Akkus aus Bohrmaschinen, Sägen, Gartengeräten.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+    <!-- Powerbank -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="4" width="12" height="16" rx="2"/>
+          <line x1="10" y1="2" x2="14" y2="2"/>
+        </svg>
+        <span>Powerbank</span>
+      </div>
+      <p class="card-text">
+        Kleine Lithium‑Ionen‑Speicher.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+    <!-- Smartphone / Tablet Akku -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="6" width="14" height="12" rx="2"/>
+          <path d="M17 10h4v4h-4z"/>
+        </svg>
+        <span>Smartphone / Tablet Akku</span>
+      </div>
+      <p class="card-text">
+        Eingebaute oder entnehmbare Akkus.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+    <!-- Laptop Akku -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="10" rx="2"/>
+          <line x1="12" y1="17" x2="12" y2="19"/>
+        </svg>
+        <span>Laptop Akku</span>
+      </div>
+      <p class="card-text">
+        Standard‑ oder Hochleistungsakkus.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+    <!-- Bleiakku -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 7h18v10H3z"/>
+          <path d="M7 7V5h2v2"/>
+          <path d="M15 7V5h2v2"/>
+        </svg>
+        <span>Blei‑Akkus (AGM, Gel, VRLA)</span>
+      </div>
+      <p class="card-text">
+        Aus USVs, Alarmanlagen, Rollstühlen, Motorrädern.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+    <!-- Aufgeblähte Akkus -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="7" width="14" height="10" rx="2"/>
+          <path d="M5 5c2 0 3 2 3 3-2 0-3-2-3-3z"/>
+        </svg>
+        <span>Aufgeblähte / beschädigte Akkus</span>
+      </div>
+      <p class="card-text">
+        Erfordern Spezialverpackung und gesonderten Transport.  
+        <strong>Orientierungswert: ab 100 € pro Akku</strong>
+      </p>
+    </div>
+
+    <!-- Sonstige Akkus -->
+    <div class="card">
+      <div class="icon-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="var(--green-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 12h8"/>
+        </svg>
+        <span>Weitere Akkutypen</span>
+      </div>
+      <p class="card-text">
+        Spezialakkus aus Industrie, Medizintechnik, Gartengeräten u. v. m.  
+        <strong>Orientierungswert: ab 50 € pro Abholung</strong>
+      </p>
+    </div>
+
+  </div>
+
+  <p style="margin-top:40px; color:#dcdcdc; font-size:0.95rem;">
+    Hinweis: Die tatsächlichen Preise werden erst nach Start des Services verbindlich festgelegt.
+  </p>
+
+</section>
+
+
+
+ 
 
     <!-- REGISTRIERUNG -->
-    <div data-include="sections/registrierung.html"></div>
+   
+<section id="registrieren">
+  <h2 class="section-title">Vorab registrieren – jetzt Bedarf anmelden</h2>
+  <p class="section-sub">
+    Bitte geben Sie an, welche Akkus abgeholt werden sollen.
+  </p>
+
+  <form class="card">
+
+    <label class="label">Postleitzahl vom Abholort*</label>
+    <input class="input" type="text" required />
+
+    <label class="label">Gewünschter Zeitraum *</label>
+    <select class="input" required>
+      <option value="">Bitte wählen</option>
+      <option>Flexibel (nächste 2–3 Monate)</option>
+      <option>Standard (innerhalb von 2 Monaten)</option>
+      <option>Express (innerhalb von 14 Tagen)</option>
+    </select>
+
+    <label class="label">E‑Mail-Adresse *</label>
+    <input class="input" type="email" required />
+
+    <h3 class="section-sub" style="text-align:left; margin-top:20px; color:var(--green-dark);">
+      Angaben zu den Akkus
+    </h3>
+
+    <p class="hint">Sie können entweder die Anzahl der Akkus angeben oder alternativ die Gesamtkapazität (Wh).</p>
+
+    <label class="label">Anzahl Smartphone-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <label class="label">Anzahl Tablet-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <label class="label">Anzahl Notebook-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <label class="label">Anzahl Werkzeug-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <label class="label">Anzahl E‑Scooter-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <label class="label">Anzahl Fahrzeug-Akkus</label>
+    <input class="input" type="number" min="0" />
+
+    <h3 class="section-sub" style="text-align:left; margin-top:30px; color:var(--green-dark);">
+      Alternative Angabe
+    </h3>
+
+    <label class="label">Gesamtkapazität (Wh) – optional</label>
+    <input class="input" type="number" />
+
+    <label class="label">Bemerkungen (optional)</label>
+    <textarea class="input" rows="4"></textarea>
+
+    <button class="btn-primary">Unverbindlich eintragen</button>
+  </form>
+</section>
+
+
+
+
+
 
   </main>
 
   <!-- FOOTER -->
-  <div data-include="sections/footer.html"></div>
+  
+<footer>
+  <div class="container footer-grid">
 
-  <script src="include.js"></script>
+    <!-- Spalte 1 -->
+    <div>
+      <div class="footer-title">AkkuAbholung.de</div>
+      <p>
+        Ihr geplanter Partner für die sichere Abholung und fachgerechte Entsorgung von Akkus aller Art – deutschlandweit.
+      </p>
+    </div>
+
+    <!-- Spalte 2 -->
+    <div>
+      <div class="footer-title">Kontakt / Impressum</div>
+      <p>
+        Stefan Pogrzeba<br>
+        📞 +49 1567 8197496<br>
+        📧 contactwebmaster@e.mail.de<br>
+        📍 Kampferweg 15, 13158 Berlin
+      </p>
+    </div>
+
+    <!-- Spalte 3 -->
+    <div>
+      <div class="footer-title">Rechtliches</div>
+      <p><a href="#datenschutz">Datenschutz</a></p>
+      <p><a href="#agb">AGB</a></p>
+    </div>
+
+  </div>
+
+  <div class="container footer-meta">
+    © 2025 AkkuAbholung.de – Alle Rechte vorbehalten.
+  </div>
+
+</footer>
+
+
+
+  <!-- AGB -->
+  <section id="agb" style="padding:80px 20px; background:white; color:#333;">
+  <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+
+  <p><strong>1. Geltungsbereich</strong><br>
+  Diese AGB gelten für alle Anfragen, Voranmeldungen und späteren Dienstleistungen im Zusammenhang mit der Abholung und Entsorgung von Akkus. Abweichende Bedingungen des Kunden finden keine Anwendung.</p>
+
+  <p><strong>2. Leistungsumfang</strong><br>
+  Der genaue Leistungsumfang wird individuell festgelegt. Der Anbieter ist berechtigt, Aufträge aus Sicherheits-, Kapazitäts- oder Transportgründen ganz oder teilweise abzulehnen.</p>
+
+  <p><strong>3. Preise und Abrechnung</strong><br>
+  Alle auf der Website genannten Preise sind unverbindliche Orientierungswerte. Verbindliche Preise werden erst nach Prüfung von Menge, Zustand und Entfernung mitgeteilt.  
+  Der Anbieter kann Zusatzkosten berechnen, wenn Akkus falsch deklariert, unzugänglich oder unsachgemäß verpackt sind.</p>
+
+  <p><strong>4. Pflichten des Kunden</strong><br>
+  Der Kunde stellt sicher, dass alle Akkus vollständig, sicher und gemäß den Vorgaben bereitgestellt werden.  
+  Beschädigte, aufgeblähte oder sicherheitskritische Akkus müssen vorab gemeldet werden.  
+  Der Kunde haftet für Schäden, die durch fehlerhafte Angaben oder unsachgemäße Verpackung entstehen.</p>
+
+  <p><strong>5. Termine und Durchführung</strong><br>
+  Abholtermine sind unverbindlich. Verzögerungen aufgrund von Verkehr, Kapazität, Wetter oder Sicherheitsanforderungen berechtigen nicht zu Schadensersatzansprüchen.</p>
+
+  <p><strong>6. Haftung</strong><br>
+  Die Haftung des Anbieters ist auf Vorsatz und grobe Fahrlässigkeit beschränkt.  
+  Für Schäden durch falsch deklarierte, defekte oder unsachgemäß bereitgestellte Akkus haftet ausschließlich der Kunde.</p>
+
+  <p><strong>7. Rücktritt und Stornierung</strong><br>
+  Der Anbieter kann vom Auftrag zurücktreten, wenn Sicherheitsrisiken bestehen oder gesetzliche Vorgaben dies erfordern.  
+  Stornierungen durch den Kunden können kostenpflichtig sein, sofern bereits Aufwand entstanden ist.</p>
+
+  <p><strong>8. Datenschutz</strong><br>
+  Personenbezogene Daten werden ausschließlich zur Bearbeitung der Anfrage und Durchführung der Dienstleistung verwendet. Weitere Informationen stehen in der Datenschutzerklärung.</p>
+
+  <p><strong>9. Schlussbestimmungen</strong><br>
+  Es gilt deutsches Recht. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Gültigkeit der übrigen Regelungen unberührt.</p>
+
+</section>
+
+
+
+
+  <!-- Datenschutz -->
+  <section id="datenschutz" style="padding:80px 20px; background:white; color:#333;">
+
+  <h2>Datenschutzerklärung</h2>
+
+  <p>
+    Der Schutz personenbezogener Daten ist uns wichtig. Diese Datenschutzerklärung informiert darüber,
+    welche Daten im Rahmen der Anfrage und späteren Abholung von Akkus verarbeitet werden.
+  </p>
+
+  <h3>1. Verantwortlicher</h3>
+  <p>
+    Stefan Pogrzeba<br>
+    Kampferweg 15<br>
+    13158 Berlin, Deutschland<br>
+    📞 +49 1567 8197496
+    📧 contactwebmaster@e.mail.de
+  </p>
+
+  <h3>2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+  <p>
+    Wir verarbeiten personenbezogene Daten ausschließlich zur Bearbeitung von Anfragen,
+    zur Terminabstimmung und zur Durchführung der Abholung. Dazu gehören insbesondere:
+  </p>
+  <ul>
+    <li>Name</li>
+    <li>Adresse</li>
+    <li>E-Mail-Adresse</li>
+    <li>Telefonnummer</li>
+    <li>Angaben zu Akkutypen und Mengen</li>
+  </ul>
+
+  <h3>3. Zweck der Verarbeitung</h3>
+  <p>
+    Die Daten werden verarbeitet, um:
+  </p>
+  <ul>
+    <li>Anfragen zu beantworten</li>
+    <li>Abholtermine zu koordinieren</li>
+    <li>Leistungen vorzubereiten und durchzuführen</li>
+    <li>rechtliche Pflichten zu erfüllen (z. B. Nachweisführung)</li>
+  </ul>
+
+  <h3>4. Weitergabe von Daten</h3>
+  <p>
+    Eine Weitergabe an Dritte erfolgt nur, wenn dies zur Durchführung der Dienstleistung erforderlich ist
+    (z. B. Transportdienstleister) oder wenn gesetzliche Vorgaben dies verlangen.
+    Eine kommerzielle Weitergabe findet nicht statt.
+  </p>
+
+  <h3>5. Speicherdauer</h3>
+  <p>
+    Daten werden nur so lange gespeichert, wie es für die Bearbeitung der Anfrage,
+    die Durchführung der Dienstleistung oder gesetzliche Aufbewahrungspflichten erforderlich ist.
+  </p>
+
+  <h3>6. Rechte der betroffenen Personen</h3>
+  <p>
+    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung
+    sowie auf Datenübertragbarkeit im Rahmen der gesetzlichen Vorgaben.
+    Anfragen hierzu können jederzeit an die oben genannte Kontaktadresse gestellt werden.
+  </p>
+
+  <h3>7. Sicherheit</h3>
+  <p>
+    Wir treffen angemessene technische und organisatorische Maßnahmen,
+    um personenbezogene Daten vor Verlust, Missbrauch oder unbefugtem Zugriff zu schützen.
+  </p>
+
+  <h3>8. Änderungen dieser Datenschutzerklärung</h3>
+  <p>
+    Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen,
+    um sie an rechtliche oder technische Änderungen anzupassen.
+  </p>
+
+</section>
+
+   <!-- <script src="include.js"></script>  -->
 </body>
 </html>
