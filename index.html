@@ -459,20 +459,22 @@
  
 
     <!-- REGISTRIERUNG -->
-   
+<!-- REGISTRIERUNG -->
 <section id="registrieren">
   <h2 class="section-title">Vorab registrieren – jetzt Bedarf anmelden</h2>
   <p class="section-sub">
     Bitte geben Sie an, welche Akkus abgeholt werden sollen.
   </p>
 
-  <form class="card">
+  <form class="card"
+        action="https://formspree.io/f/xpqzzywy"
+        method="POST">
 
     <label class="label">Postleitzahl vom Abholort*</label>
-    <input class="input" type="text" required />
+    <input class="input" type="text" name="postleitzahl" required />
 
     <label class="label">Gewünschter Zeitraum *</label>
-    <select class="input" required>
+    <select class="input" name="zeitraum" required>
       <option value="">Bitte wählen</option>
       <option>Flexibel (nächste 2–3 Monate)</option>
       <option>Standard (innerhalb von 2 Monaten)</option>
@@ -480,7 +482,7 @@
     </select>
 
     <label class="label">E‑Mail-Adresse *</label>
-    <input class="input" type="email" required />
+    <input class="input" type="email" name="email" required />
 
     <h3 class="section-sub" style="text-align:left; margin-top:20px; color:var(--green-dark);">
       Angaben zu den Akkus
@@ -489,40 +491,40 @@
     <p class="hint">Sie können entweder die Anzahl der Akkus angeben oder alternativ die Gesamtkapazität (Wh).</p>
 
     <label class="label">Anzahl Smartphone-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="smartphone_akkus" min="0" />
 
     <label class="label">Anzahl Tablet-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="tablet_akkus" min="0" />
 
     <label class="label">Anzahl Notebook-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="notebook_akkus" min="0" />
 
     <label class="label">Anzahl Werkzeug-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="werkzeug_akkus" min="0" />
 
     <label class="label">Anzahl E‑Scooter-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="escooter_akkus" min="0" />
 
     <label class="label">Anzahl Fahrzeug-Akkus</label>
-    <input class="input" type="number" min="0" />
+    <input class="input" type="number" name="fahrzeug_akkus" min="0" />
 
     <h3 class="section-sub" style="text-align:left; margin-top:30px; color:var(--green-dark);">
       Alternative Angabe
     </h3>
 
     <label class="label">Gesamtkapazität (Wh) – optional</label>
-    <input class="input" type="number" />
+    <input class="input" type="number" name="gesamtkapazitaet_wh" />
 
     <label class="label">Bemerkungen (optional)</label>
-    <textarea class="input" rows="4"></textarea>
+    <textarea class="input" rows="4" name="bemerkungen"></textarea>
 
-    <button class="btn-primary">Unverbindlich eintragen</button>
+    <button class="btn-primary" type="submit">Unverbindlich eintragen</button>
   </form>
-</section>
+</section>   
 
 
 
-
+    
 
 
   </main>
